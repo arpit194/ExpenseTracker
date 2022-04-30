@@ -1,0 +1,68 @@
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.home {
+  display: flex;
+  animation: show 0.5s;
+  width: 55%;
+  margin-left: auto;
+  flex-direction: column;
+}
+
+.img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+}
+
+.total {
+  background-color: #f18805;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  width: 100%;
+}
+
+.total span {
+  color: #fff;
+  font-weight: bold;
+  margin: auto;
+  font-size: 45px;
+}
+
+.chartContainer {
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 25px;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 15px;
+}
+
+.chartContainer span {
+  background-color: #3f51b5;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: auto;
+  font-size: 45px;
+  height: 15%;
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.chart {
+  height: 85%;
+}

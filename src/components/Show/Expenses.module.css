@@ -1,0 +1,85 @@
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.expenses {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  height: fit-content;
+  padding-bottom: 15px;
+  animation: show 0.5s;
+}
+
+.header {
+  display: flex;
+  margin: 25px 0px;
+  width: 75%;
+  margin: 25px auto;
+}
+
+.headerText {
+  width: 50%;
+  background-color: #3f51b5;
+  border-radius: 5px;
+  display: flex;
+  padding: 10px;
+}
+
+.headerText span {
+  font-size: 40px;
+  color: #fff;
+  margin: auto;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.filters select {
+  color: #f18805;
+  font-weight: bold;
+  width: 50%;
+  margin-left: 25px;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.noData {
+  width: 75%;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 0 auto 35px;
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+}
+
+.total {
+  margin: auto;
+  display: flex;
+  width: 75%;
+  margin-bottom: 15px;
+}
+
+.total span {
+  margin-left: auto;
+  width: 20%;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 15px;
+  font-weight: bold;
+  text-align: center;
+  color: #f18805;
+  font-size: 25px;
+}

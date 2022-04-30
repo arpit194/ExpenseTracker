@@ -1,0 +1,9 @@
+.expenseChart {
+  width: 75%;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 0 auto 35px;
+  display: flex;
+  justify-content: space-around;
+}

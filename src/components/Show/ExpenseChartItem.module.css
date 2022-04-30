@@ -1,0 +1,38 @@
+.expenseChartItem {
+  width: 6%;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 35px;
+  height: 200px;
+}
+
+.barContainer {
+  width: 75%;
+  position: relative;
+  height: 100%;
+}
+
+.barBackground {
+  background-color: #e0e0e0;
+  position: absolute;
+  border-radius: 50px;
+  width: 100%;
+  height: 100%;
+}
+
+.barFill {
+  background-color: #3f51b5;
+  height: 0%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-radius: 50px;
+}
+
+.month {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+}

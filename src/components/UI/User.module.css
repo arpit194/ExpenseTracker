@@ -1,0 +1,13 @@
+.user {
+  display: flex;
+}
+
+.user span {
+  color: white;
+}
+
+.user img {
+  width: 20px;
+  margin: auto;
+  margin-right: 10px;
+}
