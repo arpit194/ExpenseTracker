@@ -48,6 +48,9 @@ const Routes = () => {
               <Login />
             </Container>
           </Route>
+          <Route path="/">
+            <Redirect to="/login" />
+          </Route>
         </Fragment>
       )}
     </Switch>
