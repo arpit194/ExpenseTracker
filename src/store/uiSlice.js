@@ -5,6 +5,10 @@ const initialState = {
   yearFilter: new Date().getFullYear(),
   isLoading: false,
   displayName: "User",
+  alert: {
+    type: "error",
+    message: "",
+  },
 };
 
 const uiSlice = createSlice({
@@ -22,6 +26,10 @@ const uiSlice = createSlice({
     },
     setDisplayName(state, action) {
       state.displayName = action.payload;
+    },
+    setAlert(state, action) {
+      state.alert.type = action.payload.type;
+      state.alert.message = action.payload.message;
     },
   },
 });

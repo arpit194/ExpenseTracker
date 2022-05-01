@@ -1,14 +1,11 @@
+import { dbURL } from "./constants";
 import { expenseActions } from "./expenseSlice";
 import { uiActions } from "./uiSlice";
 
 export const fetchExpenses = (userId) => {
   return async (dispatch) => {
     dispatch(uiActions.setIsLoading(true));
-    const response = await fetch(
-      "https://expensetracker-9695c-default-rtdb.firebaseio.com/" +
-        userId +
-        ".json"
-    );
+    const response = await fetch(dbURL + userId + ".json");
 
     if (!response.ok) {
     }

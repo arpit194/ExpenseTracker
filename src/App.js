@@ -14,7 +14,6 @@ function App() {
 
   useEffect(() => {
     if (loggedIn && userId) {
-      alert("fetching data");
       dispatch(fetchExpenses(userId));
     }
   }, [dispatch, loggedIn, userId]);

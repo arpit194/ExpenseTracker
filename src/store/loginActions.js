@@ -1,7 +1,7 @@
+import { useHistory } from "react-router-dom";
+import { API_KEY } from "./constants";
 import { loginActions } from "./loginSlice";
 import { uiActions } from "./uiSlice";
-
-const API_KEY = "AIzaSyAUY6i5tSEeqHMKml2XNOUsGNiWK8E0wTU"; // For testing
 
 export const signUp = (name, email, password) => {
   return async (dispatch) => {
@@ -68,6 +68,10 @@ export const login = (email, password) => {
     );
 
     if (!response.ok) {
+      dispatch(uiActions.setIsLoading(false));
+      const history = useHistory();
+      history.push("/login");
+      return;
     }
     const userData = await response.json();
 

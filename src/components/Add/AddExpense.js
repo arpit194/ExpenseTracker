@@ -20,7 +20,7 @@ const AddExpense = () => {
       disptach(formActions.resetForm());
       history.push("/showExpenses");
     } else {
-      alert(errors);
+      console.log(errors);
     }
   };
 

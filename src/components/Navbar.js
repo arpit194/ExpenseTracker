@@ -15,6 +15,9 @@ const Navbar = () => {
     dispatch(loginActions.logout());
     dispatch(expenseActions.setExpenses());
     dispatch(uiActions.setDisplayName("User"));
+    localStorage.removeItem("displayName");
+    localStorage.removeItem("token");
+    localStorage.removeItem("userId");
   };
   return (
     <nav className={classes.navbar}>
