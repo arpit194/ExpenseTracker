@@ -21,4 +21,4 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-src/store/vaiables.js
+src/store/variables.js
