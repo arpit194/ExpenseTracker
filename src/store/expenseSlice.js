@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuidv4 } from "uuid";
-import { dbURL } from "constants";
+import { dbURL } from "./variables";
 
 const initialState = { expenses: [], totalAmount: 0 };
 

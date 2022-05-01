@@ -1,4 +1,4 @@
-import { dbURL } from "constants";
+import { dbURL } from "./variables";
 import { expenseActions } from "./expenseSlice";
 import { uiActions } from "./uiSlice";
 

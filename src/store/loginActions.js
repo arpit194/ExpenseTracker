@@ -1,4 +1,4 @@
-import { API_KEY } from "constants";
+import { API_KEY } from "./variables";
 import { loginActions } from "./loginSlice";
 import { uiActions } from "./uiSlice";
 
