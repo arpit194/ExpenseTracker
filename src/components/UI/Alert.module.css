@@ -1,0 +1,33 @@
+.alert {
+  padding: 25px;
+  display: flex;
+  position: absolute;
+  top: 10vh;
+  right: 0;
+  margin: 25px;
+  color: white;
+  font-weight: bold;
+  width: 50%;
+  border-radius: 5px;
+}
+
+.alert span {
+  font-size: large;
+  width: 90%;
+}
+
+.alert div {
+  width: 50px;
+  margin: auto;
+  margin-right: 15px;
+  text-align: right;
+  cursor: pointer;
+}
+
+.error {
+  background-color: #bc4b51;
+}
+
+.success {
+  background-color: #3f51b5;
+}

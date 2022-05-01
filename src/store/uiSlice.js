@@ -6,8 +6,8 @@ const initialState = {
   isLoading: false,
   displayName: "User",
   alert: {
-    type: "error",
-    message: "",
+    type: null,
+    message: null,
   },
 };
 

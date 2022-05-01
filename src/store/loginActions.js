@@ -1,5 +1,4 @@
-import { useHistory } from "react-router-dom";
-import { API_KEY } from "./constants";
+import { API_KEY } from "constants";
 import { loginActions } from "./loginSlice";
 import { uiActions } from "./uiSlice";
 
@@ -23,9 +22,18 @@ export const signUp = (name, email, password) => {
     );
 
     if (!response.ok) {
+      dispatch(uiActions.setIsLoading(false));
+      const userData = await response.json();
+      dispatch(
+        uiActions.setAlert({ type: "error", message: userData.error.message })
+      );
     }
 
     const userData = await response.json();
+
+    dispatch(
+      uiActions.setAlert({ type: "success", message: "Signup Successful" })
+    );
 
     fetch(
       "https://identitytoolkit.googleapis.com/v1/accounts:update?key=" +
@@ -69,16 +77,23 @@ export const login = (email, password) => {
 
     if (!response.ok) {
       dispatch(uiActions.setIsLoading(false));
-      const history = useHistory();
-      history.push("/login");
+      const userData = await response.json();
+
+      dispatch(
+        uiActions.setAlert({ type: "error", message: userData.error.message })
+      );
       return;
     }
-    const userData = await response.json();
 
+    const userData = await response.json();
     dispatch(loginActions.setToken(userData.idToken));
     dispatch(loginActions.setUserId(userData.localId));
     localStorage.setItem("token", userData.idToken);
     localStorage.setItem("userId", userData.localId);
+
+    dispatch(
+      uiActions.setAlert({ type: "success", message: "Login Successful" })
+    );
 
     const res = await fetch(
       "https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=" +

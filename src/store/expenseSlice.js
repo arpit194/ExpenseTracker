@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuidv4 } from "uuid";
+import { dbURL } from "constants";
 
 const initialState = { expenses: [], totalAmount: 0 };
 
@@ -13,15 +14,10 @@ const expenseSlice = createSlice({
       state.expenses.push(expense);
       state.totalAmount =
         parseInt(state.totalAmount) + parseInt(expense.amount);
-      fetch(
-        "https://expensetracker-9695c-default-rtdb.firebaseio.com/" +
-          action.payload.userId +
-          ".json",
-        {
-          method: "PUT",
-          body: JSON.stringify(state),
-        }
-      );
+      fetch(dbURL + action.payload.userId + ".json", {
+        method: "PUT",
+        body: JSON.stringify(state),
+      });
     },
     setExpenses(state, action) {
       if (action.payload) {

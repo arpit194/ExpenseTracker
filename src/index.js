@@ -5,7 +5,7 @@ import App from "./App";
 import { Provider } from "react-redux";
 import store from "./store/store";
 import { HashRouter, BrowserRouter } from "react-router-dom";
-import { env } from "./store/constants";
+import { env } from "constants";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
