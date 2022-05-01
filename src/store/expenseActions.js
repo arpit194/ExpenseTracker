@@ -8,6 +8,9 @@ export const fetchExpenses = (userId) => {
     const response = await fetch(dbURL + userId + ".json");
 
     if (!response.ok) {
+      dispatch(
+        uiActions.setAlert({ type: "error", message: "Cannot fetch expenses" })
+      );
     }
     const expenses = await response.json();
     dispatch(expenseActions.setExpenses(expenses));
