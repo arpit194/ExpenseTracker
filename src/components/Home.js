@@ -81,7 +81,11 @@ const Home = () => {
   };
   return (
     <div className={classes.home}>
-      <img src="./images/expenses.jpg" className={classes.img} alt="expenses" />
+      <img
+        src="ExpenseTracker/images/expenses.jpg"
+        className={classes.img}
+        alt="expenses"
+      />
       <div className={classes.total}>
         <span>All time spending: ₹ {totalAmount}</span>
       </div>
