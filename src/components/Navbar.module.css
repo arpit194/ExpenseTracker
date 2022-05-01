@@ -125,7 +125,7 @@
 
   .menu span {
     margin: auto;
-    rotate: 0deg;
+    transform: rotate(0deg);
     transition: 0.5s;
     font-weight: bold;
     color: #fff;

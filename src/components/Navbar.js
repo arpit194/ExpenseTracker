@@ -24,17 +24,17 @@ const Navbar = () => {
     localStorage.removeItem("userId");
     mobileNav.current.style.left = "100%";
     setNavOpen(false);
-    menu.current.style.rotate = "0deg";
+    menu.current.style.transform = "rotate(0deg)";
   };
 
   const handleNav = () => {
     if (navOpen) {
       mobileNav.current.style.left = "100%";
-      menu.current.style.rotate = "0deg";
+      menu.current.style.transform = "rotate(0deg)";
       setNavOpen(false);
     } else {
       mobileNav.current.style.left = "0";
-      menu.current.style.rotate = "90deg";
+      menu.current.style.transform = "rotate(-90deg)";
       setNavOpen(true);
     }
   };
@@ -92,6 +92,7 @@ const Navbar = () => {
                   exact
                   activeClassName={classes.active}
                   className={classes.navlink}
+                  onClick={handleNav}
                 >
                   Login
                 </NavLink>
@@ -101,6 +102,7 @@ const Navbar = () => {
                   to="/signup"
                   activeClassName={classes.active}
                   className={classes.navlink}
+                  onClick={handleNav}
                 >
                   Signup
                 </NavLink>

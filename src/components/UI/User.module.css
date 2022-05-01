@@ -11,3 +11,15 @@
   margin: auto;
   margin-right: 10px;
 }
+
+@media (max-width: 700px) {
+  .user span {
+    color: #201e1f;
+  }
+
+  .user img {
+    background-color: #201e1f;
+    margin: 0;
+    margin-right: 5px;
+  }
+}
