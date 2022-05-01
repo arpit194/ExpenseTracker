@@ -65,5 +65,8 @@
   margin-right: 25px;
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 700px) {
+  .login {
+    width: 100%;
+  }
 }

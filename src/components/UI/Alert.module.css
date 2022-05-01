@@ -31,3 +31,9 @@
 .success {
   background-color: #3f51b5;
 }
+
+@media (max-width: 700px) {
+  .alert {
+    width: 75%;
+  }
+}

@@ -56,3 +56,46 @@
   color: #fff;
   margin: auto;
 }
+
+@media (max-width: 700px) {
+  .expense {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  .priceContainer {
+    margin-left: auto;
+    padding: 5px;
+    width: fit-content;
+  }
+
+  .priceContainer span {
+    font-size: 20px;
+  }
+
+  .detailsContainer {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .details {
+    width: 100%;
+  }
+
+  .date {
+    font-size: 15px;
+    width: 50%;
+    margin: auto;
+  }
+
+  .expenseType {
+    padding: 5px;
+    font-size: 15px;
+    margin-left: 0;
+  }
+
+  .description {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+}

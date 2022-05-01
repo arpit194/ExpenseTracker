@@ -66,3 +66,18 @@
 .chart {
   height: 85%;
 }
+
+@media (max-width: 700px) {
+  .home {
+    width: 100%;
+  }
+
+  .total span {
+    font-size: 20px;
+  }
+
+  .chartContainer span {
+    font-size: 20px;
+    height: auto;
+  }
+}

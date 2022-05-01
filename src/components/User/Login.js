@@ -1,4 +1,4 @@
-import classes from "./Signup.module.css";
+import classes from "./Login.module.css";
 import Button from "../UI/Button";
 import { useRef } from "react";
 import { useDispatch } from "react-redux";
@@ -23,7 +23,7 @@ const Login = () => {
   };
 
   return (
-    <div className={classes.signup}>
+    <div className={classes.login}>
       <form
         className={classes.form}
         autoComplete="off"

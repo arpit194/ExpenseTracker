@@ -83,3 +83,38 @@
   color: #f18805;
   font-size: 25px;
 }
+
+@media (max-width: 700px) {
+  .header {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .headerText {
+    width: 100%;
+  }
+
+  .headerText span {
+    font-size: 20px;
+  }
+
+  .filters {
+    width: 100%;
+    margin-top: 25px;
+  }
+
+  .filters select {
+    margin-left: 0px;
+    width: 45%;
+  }
+
+  .total {
+    width: 100%;
+  }
+
+  .total span {
+    width: 100%;
+    font-size: 20px;
+  }
+}
