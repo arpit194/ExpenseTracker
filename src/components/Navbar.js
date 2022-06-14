@@ -18,7 +18,7 @@ const Navbar = () => {
   const logoutHandler = () => {
     dispatch(loginActions.logout());
     dispatch(expenseActions.setExpenses());
-    dispatch(uiActions.setDisplayName("User"));
+    dispatch(uiActions.reset());
     localStorage.removeItem("displayName");
     localStorage.removeItem("token");
     localStorage.removeItem("userId");

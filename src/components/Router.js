@@ -31,6 +31,9 @@ const Routes = () => {
               <Expenses />
             </Container>
           </Route>
+          <Route path="/">
+            <Redirect to="/home" />
+          </Route>
           <Route path="/login">
             <Redirect to="/" />
           </Route>

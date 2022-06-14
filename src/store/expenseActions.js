@@ -12,7 +12,13 @@ export const fetchExpenses = (userId) => {
         uiActions.setAlert({ type: "error", message: "Cannot fetch expenses" })
       );
     }
-    const expenses = await response.json();
+    let expenses = await response.json();
+    expenses = {
+      expenses: expenses.expenses.filter((expense) => {
+        return expense !== null;
+      }),
+      totalAmount: expenses.totalAmount,
+    };
     dispatch(expenseActions.setExpenses(expenses));
     dispatch(uiActions.setIsLoading(false));
   };

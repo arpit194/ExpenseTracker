@@ -4,18 +4,18 @@ import "./index.css";
 import App from "./App";
 import { Provider } from "react-redux";
 import store from "./store/store";
-import { HashRouter, BrowserRouter } from "react-router-dom";
+import { StaticRouter, BrowserRouter } from "react-router-dom";
 import { env } from "./store/variables";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   env === "PROD" ? (
-    <HashRouter>
+    <StaticRouter>
       <Provider store={store}>
         <App />
       </Provider>
-    </HashRouter>
+    </StaticRouter>
   ) : (
     <BrowserRouter>
       <Provider store={store}>

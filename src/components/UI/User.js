@@ -5,7 +5,7 @@ const User = () => {
   const user = useSelector((state) => state.ui.displayName);
   return (
     <div className={classes.user}>
-      <img src="images/profile.png" alt="User" />
+      <img src="ExpenseTracker/images/profile.png" alt="User" />
       <span>{user}</span>
     </div>
   );

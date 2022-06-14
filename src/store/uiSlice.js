@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  monthFilter: -1,
+  monthFilter: new Date().getMonth(),
   yearFilter: new Date().getFullYear(),
   isLoading: false,
   displayName: "User",
@@ -30,6 +30,16 @@ const uiSlice = createSlice({
     setAlert(state, action) {
       state.alert.type = action.payload.type;
       state.alert.message = action.payload.message;
+    },
+    reset(state, action) {
+      state.monthFilter = new Date().getMonth();
+      state.yearFilter = new Date().getFullYear();
+      state.isLoading = false;
+      state.displayName = "User";
+      state.alert = {
+        type: null,
+        message: null,
+      };
     },
   },
 });
